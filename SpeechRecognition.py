@@ -7,7 +7,9 @@ import speech_recognition as sr
 import pyttsx3
 from flask import Flask, request, make_response
 from flask_restful import Resource, Api
+import os
 
+cf_port = os.getenv("PORT")
 app = Flask(__name__)
 api = Api(app)
 
@@ -56,5 +58,7 @@ def runner():
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port='8885')
-    runner()
+    if cf_port is None:
+        app.run(host='0.0.0.0', port='8885')
+    else:
+        app.run(host='0.0.0.0', port=int(cf_port))

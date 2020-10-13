@@ -1,0 +1,6 @@
+---
+applications:
+  - name: SpeechRecognitionAPI
+    host: SpeechRecognitionAPI
+    path: .
+    command: python SpeechRecognition.py

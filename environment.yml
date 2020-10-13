@@ -1,0 +1,10 @@
+name: idp
+channels:
+  - intel
+  - defaults
+dependencies:
+  - python=3
+  - intelpython3_core
+  - sympy
+  - flask
+prefix: C:\Users\somil\anaconda3\envs\idp
